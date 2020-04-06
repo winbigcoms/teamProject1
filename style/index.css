@@ -1,0 +1,369 @@
+@import url("./normalize.css");
+
+/*  css 모듈 */
+a{
+    text-decoration: none;
+    color:#000;
+}
+ul, ol{
+    list-style: none;
+    padding-left: 0;
+}
+.resetBtn{
+    border:0px;
+    padding:0px;
+    cursor: pointer;
+}
+.resetMargin{
+    margin:0;
+}
+.divideBar{
+    display:block;
+    height: 2px;
+    width:100%;
+    background-color: #000;
+    margin: 20px 0;
+}
+th{
+    font-weight: 400;
+}
+.a11yHidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+/* 헤더 공통 */
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.7);
+    z-index:3;
+}
+/* 헤더 로고부분! */
+.headerHeading{
+    height: 100%;
+    line-height: 80px;    
+}
+.headerHeading a{
+    display:inline-block;
+    height: 100%;
+    padding: 0 20px;
+    color:#31287c;
+    font-weight: bold;
+}
+.headerHeading a img{
+    width: auto;
+    height: 50%;
+}
+/* 모바일 어플리케이션 시작 wraper */
+.appStartWraper{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/이디야커버이미지.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -70px;
+    z-index: 1000;
+    animation: opening 4s 1 forwards;
+}
+@keyframes opening{
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+[class*=cherryBlossom]{
+    position: absolute;
+}
+.cherryBlossom1{
+    top:-60px;
+    left: 50%;
+    animation: cherryBlossom1 3.5s forwards;
+}
+.cherryBlossom2{
+    top:-60px;
+    left: 25%;
+    animation: cherryBlossom2 3.5s forwards
+}
+.cherryBlossom3{
+    top:-60px;
+    left: 70%;
+    animation: cherryBlossom3 3.5s forwards
+}
+@keyframes cherryBlossom1{
+    0%{
+        top:-60px;
+        left: 50%;
+    }
+    100%{
+        top:170px;
+        left:55%
+    }
+}
+@keyframes cherryBlossom2{
+    0%{
+        top:-60px;
+        left:25%;
+    }
+    100%{
+        top:400px;
+        left:40%        
+    }
+}
+@keyframes cherryBlossom3{
+    0%{
+        top:-60px;
+        left: 70%;
+    }
+    100%{
+        top:440px;
+        left:53%
+    }
+}
+/* 헤더 네비게이션 부분 */
+.openNavigationBtn{
+    position: absolute;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    right:0;
+    width:80px;
+    height: 80px;
+    background-color: #fff;
+    transition: all 0.7s;
+}
+.openNavigationBtn:hover{
+    background-color: #eee; 
+}
+/* 헤더 햄버거 패티부분 */
+.openNavigationBtn span{
+    display:block;
+    width: 25px;
+    height: 4px;
+    background-color: #000;
+    margin: 2px 0;
+}
+/* 메인 네비게이션 영역 */
+
+/* 메인 네비게이션 내부 */
+.navigationBox{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(110%);
+    transition: all 0.5s;
+    background-color: rgba(20, 24, 44, 0.9);
+}
+.navigationLists{
+    margin-top: 60px;
+}
+.navigationLists li a{
+    display:block;
+    color:#fff;
+    padding:20px 10px;
+    border-bottom: 1px solid #303055;
+    transition: all 0.5s;
+}
+.navigationLists li a:hover{
+    background-color: #5555cc;
+}
+/* 네비게이션 스크립트 모듈 */
+.backgroundSkyblue{
+    background-color: #5555cc;
+}
+.openNavi{
+    transform: translateX(0); 
+}
+    /* 공통 닫기 버튼 */
+.closeBtn{
+    position: absolute;
+    top:16px;
+    right: 25px;
+    width:50px;
+    height: 50px;
+    text-indent: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+.closeBtn span{
+    position: absolute;
+    width:50%;
+    top:50%;
+    left: 10px;
+    height: 3px;
+    background-color: #fff;
+}
+.closeBtn:hover{
+    transform: scale(1.2);
+}
+.cross1{
+    transform: rotate(45deg);
+}
+.cross2{
+    transform: rotate(-45deg);
+}
+/* 메뉴 리스트 */
+.menuLists li a{
+    border-bottom: 1px solid rgba(24, 24, 181, 0.3);
+    display:block;
+    font-size: 1em;
+    color:#fff;
+    padding: 15px 0 15px 30px;
+}
+/* 메인 섹션 공통 코드 */
+.main{
+    width: 80%;
+    margin:0 auto;
+    margin-top: 100px;
+
+}
+.menuSection{
+    width:100%;
+    max-width: 800px;
+    margin:0 auto;
+    padding: 40px 0;
+}
+
+
+
+/* 메인메뉴 */
+.menuLists{
+    margin:0 auto;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+.menuList{
+    cursor: pointer;
+    position: relative;
+}
+
+.menuList figure{
+    box-sizing: border-box;
+    width:100%;
+    background-color: #eee;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+figure img{
+    display:block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+    transition: all 0.5s;
+    padding: 10px 0;
+}
+.menuList:hover > figure img{
+    transform: scale(1.1);
+
+}
+.menuList figcaption{
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+/* 메뉴 상세 */
+/* 메뉴 상세 설명 박스 */
+.menuExplain{
+    position: absolute;
+    background-color: rgba(255,255,255,0.7);
+    opacity: 0;
+    transition: all 0.3s;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display:none
+}
+/* 이벤트 사용을 위한 모듈 */
+/* opacity 보이기 */
+.show{
+    display:block;
+    cursor: text;
+}
+/* 메뉴 타이틀 */
+.menuTitle{
+    font-size: 1.2em;
+    padding-top:40px
+}
+.menuTitle span{
+    display:block;
+    font-size: 0.8em;
+    color: #999999
+}
+/* 메뉴 성분 분석표 */
+.menuIngredient{
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #eee;
+}
+.menuIngredientTable{
+    margin:0 auto;
+    border-collapse: collapse;
+}
+.menuIngredientTable tr td{
+    font-size: 0.8em;
+    padding: 0 10px;
+}
+.menuIngredientTable tr th:nth-child(n+2){
+    border-left: 1px solid #000;
+}
+/* 상세 설명 닫기 박스 */
+.exampleBtn{
+    top:0;
+    right:0;
+    cursor: pointer;
+}
+.exampleBtn span{
+    background-color: #000;
+}
+
+@media(max-width:529px){
+    .menuList{
+        width:100%;
+    }
+    .menuList:not(:first-child){
+        margin-top: 20px;
+    }
+}
+@media(min-width:530px){
+    .main{
+        max-width: 1000px;
+    }
+    .menuList{
+        width:48%;
+    }
+    .menuList:nth-child(n+3){
+        margin-top: 30px;
+    }
+}
