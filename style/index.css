@@ -50,12 +50,35 @@ th{
     height: 100%;
     line-height: 80px;    
 }
+
+
+
 .headerHeading a{
     display:inline-block;
     height: 100%;
     padding: 0 20px;
     color:#31287c;
     font-weight: bold;
+
+    animation-delay: 3s;
+    animation-duration: 0.5s;
+    animation-name: logo;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+    
+}
+
+/* 헤더 애니메이션 */
+@keyframes logo{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
 }
 .headerHeading a img{
     width: auto;
@@ -150,6 +173,22 @@ th{
     height: 80px;
     background-color: #fff;
     transition: all 0.7s;
+
+    animation-name: navBtn;
+    animation-delay: 3s;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+}
+/* 네비게이션버튼 애니메이션 */
+@keyframes navBtn{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 .openNavigationBtn:hover{
     background-color: #eee; 
@@ -260,6 +299,33 @@ th{
 .menuList{
     cursor: pointer;
     position: relative;
+
+    animation-name: list;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+}
+/* 메뉴 애니메이션 */
+.menuList:nth-child(1){
+    animation-delay: 3.2s;
+}
+.menuList:nth-child(2){
+    animation-delay: 3.4s;
+}
+.menuList:nth-child(3){
+    animation-delay: 3.6s;
+}
+.menuList:nth-child(4){
+    animation-delay: 3.8s;
+}
+@keyframes list{
+    0%{
+        opacity: 0;
+        transform: translateY(15%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 .menuList figure{
@@ -347,6 +413,7 @@ figure img{
 .exampleBtn span{
     background-color: #000;
 }
+
 
 @media(max-width:529px){
     .menuList{
