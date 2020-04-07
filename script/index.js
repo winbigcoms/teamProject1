@@ -5,7 +5,7 @@ var closeNaviBtn = document.querySelector(".closeBtn");
 var menuList = document.querySelectorAll(".menuList");
 var menuExplain = document.querySelectorAll(".menuExplain");
 var exampleCloseBtn = document.querySelectorAll(".exampleBtn");
-var exampleCloseBtnCross = document.querySelectorAll(".exampleBtn span");
+// var exampleCloseBtnCross = document.querySelectorAll(".exampleBtn span");
 var navigationItems = document.querySelectorAll(".navigationItems");
 
 
@@ -49,9 +49,9 @@ for(var i=0; i < menuList.length; i++){
 for(var i=0; i < exampleCloseBtn.length; i++){
     exampleCloseBtn[i].addEventListener("click",function(e){
         e.stopPropagation();
-        var setTarget = e.currentTarget.parentNode.parentNode;
-        // console.log(setTarget);
-
+        var setTarget = e.currentTarget.parentNode;
+        console.log(setTarget);
+        console.log(e.currentTarget);
         setTarget.style.opacity="0";
         setTimeout(function(){
             setTarget.classList.remove("show")

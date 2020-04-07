@@ -17,13 +17,13 @@ ul, ol{
 .resetMargin{
     margin:0;
 }
-.divideBar{
+/* .divideBar{
     display:block;
     height: 2px;
     width:100%;
     background-color: #000;
     margin: 20px 0;
-}
+} */
 th{
     font-weight: 400;
 }
@@ -60,28 +60,6 @@ th{
     color:#31287c;
     font-weight: bold;
 
-<<<<<<< HEAD
-=======
-    animation-delay: 3s;
-    animation-duration: 0.5s;
-    animation-name: logo;
-    animation-direction: normal;
-    animation-fill-mode: backwards;
-    
-}
-
-/* 헤더 애니메이션 */
-@keyframes logo{
-    0%{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(0%);
-        opacity: 1;
-    }
-
->>>>>>> 54290d57808b65456d6d055d20925c7a46850059
 }
 
 .headerHeading a img{
@@ -90,68 +68,6 @@ th{
 }
 /* 모바일 어플리케이션 시작 wraper */
 
-@keyframes opening{
-    0%{
-        opacity: 1;
-    }
-    20%{
-        opacity: 1;
-    }
-    60%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-[class*=cherryBlossom]{
-    position: absolute;
-}
-.cherryBlossom1{
-    top:-60px;
-    left: 50%;
-    animation: cherryBlossom1 4s ease forwards;
-}
-.cherryBlossom2{
-    top:-60px;
-    left: 25%;
-    animation: cherryBlossom2 4s ease forwards
-}
-.cherryBlossom3{
-    top:-60px;
-    left: 70%;
-    animation: cherryBlossom3 4s ease forwards
-}
-@keyframes cherryBlossom1{
-    0%{
-        top:-60px;
-        left: 50%;
-    }
-    100%{
-        top:170px;
-        left:55%
-    }
-}
-@keyframes cherryBlossom2{
-    0%{
-        top:-60px;
-        left:25%;
-    }
-    100%{
-        top:400px;
-        left:40%        
-    }
-}
-@keyframes cherryBlossom3{
-    0%{
-        top:-60px;
-        left: 70%;
-    }
-    100%{
-        top:440px;
-        left:53%
-    }
-}
 /* 헤더 네비게이션 부분 */
 .openNavigationBtn{
     position: absolute;
@@ -166,10 +82,6 @@ th{
     background-color: #fff;
     transition: all 0.7s;
 
-    animation-name: navBtn;
-    animation-delay: 3s;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards;
 }
 /* 네비게이션버튼 애니메이션 */
 @keyframes navBtn{
@@ -282,12 +194,12 @@ th{
     cursor: pointer;
     position: relative;
 
-    animation-name: list;
+    /* animation-name: list;
     animation-duration: 0.5s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: backwards; */
 }
 /* 메뉴 애니메이션 */
-.menuList:nth-child(1){
+/* .menuList:nth-child(1){
     animation-delay: 3.2s;
 }
 .menuList:nth-child(2){
@@ -298,7 +210,7 @@ th{
 }
 .menuList:nth-child(4){
     animation-delay: 3.8s;
-}
+} */
 @keyframes list{
     0%{
         opacity: 0;
@@ -367,6 +279,14 @@ figure img{
     font-size: 1.2em;
     padding-top:40px
 }
+.menuTitle::after{
+    content:"";
+    display:block;
+    width:100%;
+    height: 1px;
+    background-color: #000;
+    margin:20px 0;
+}
 .menuTitle span{
     display:block;
     font-size: 0.8em;
@@ -431,6 +351,69 @@ figure img{
     /* .appStartWraper{
         background-position: 0 50%;
     } */
+    
+@keyframes opening{
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+[class*=cherryBlossom]{
+    position: absolute;
+}
+.cherryBlossom1{
+    top:-60px;
+    left: 50%;
+    animation: cherryBlossom1 4s ease forwards;
+}
+.cherryBlossom2{
+    top:-60px;
+    left: 25%;
+    animation: cherryBlossom2 4s ease forwards
+}
+.cherryBlossom3{
+    top:-60px;
+    left: 70%;
+    animation: cherryBlossom3 4s ease forwards
+}
+@keyframes cherryBlossom1{
+    0%{
+        top:-60px;
+        left: 50%;
+    }
+    100%{
+        top:170px;
+        left:55%
+    }
+}
+@keyframes cherryBlossom2{
+    0%{
+        top:-60px;
+        left:25%;
+    }
+    100%{
+        top:400px;
+        left:40%        
+    }
+}
+@keyframes cherryBlossom3{
+    0%{
+        top:-60px;
+        left: 70%;
+    }
+    100%{
+        top:440px;
+        left:53%
+    }
+}
 }
 @media(min-width:530px){
     .main{
@@ -441,6 +424,12 @@ figure img{
     }
     .menuList:nth-child(n+3){
         margin-top: 30px;
+    }
+    .openNavigationBtn{
+        animation-name: navBtn;
+        animation-delay: 3s;
+        animation-duration: 0.5s;
+        animation-fill-mode: backwards;
     }
     .headerHeading a{
         transform: translateX(-100%);
