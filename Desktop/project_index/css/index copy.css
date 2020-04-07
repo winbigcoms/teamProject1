@@ -1,0 +1,175 @@
+@import url(/css/normalize.css);
+
+/*CSS module*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+.a11yHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+
+}
+
+/*Box size*/
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+figure{
+    margin: 0;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgba(200, 200, 200, 0.1);
+}
+/*head*/
+
+.ediya{
+    height: 80px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+.ediyaHead{
+    margin:0;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.headImg{
+}
+.burger{
+}
+.burgerbarGroup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: none;
+    background-color: white;
+    width: 80px;
+    height: 80px;  
+}
+.burgerbar{
+    position: absolute;
+    background-color: #aaa;
+    left: 0;
+    width: 35%;
+    height: 5%;
+}
+
+.top{
+    top: 35%;
+    margin-left: 35%;
+}
+
+.middle{
+    top: 50%;
+    margin-left: 35%;
+    transform: translateY(-50%);
+}
+
+.bottom{
+    top: 65%;
+    margin-left: 35%;
+    transform: translateY(-100%);
+}
+
+.manu {
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+}   
+
+body{
+    position: relative;
+}
+
+.manuBoard{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10vh;
+    background-color:rgba(20, 24, 44, 0.9);
+
+}
+.manuBoard li{
+    border-bottom: 1px solid rgba(245, 244, 251, 0.3);
+
+    
+    
+}
+.manuTop{
+    padding-top: 15%;
+}
+
+.manuBoard li a{
+    padding: 15px;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.endButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: none;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.first{ 
+    top:45%;
+    right:40%;
+    transform: rotate(45deg);
+    margin-left: 35%;
+     }
+
+.second{
+    top: 45%;
+    right:40%;
+    transform: rotate(-45deg);
+    margin-left: 35%;
+}
+
+.endButton:hover{
+    transform: scale(1.2, 1.2);
+
+}
+
+.manuBoard li:hover{
+    background-color:rgba(20, 24, 44, 0.7);
+}
+
+.manu{
+    display: none;
+}
+
+@media screen and (max-width: ){
+    /*모바일 디바이스*/
+
+}
+
+
+@media screen and (min-width: ){
+    /*데스크탑 디바이스*/
+}
