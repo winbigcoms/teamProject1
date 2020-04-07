@@ -340,7 +340,7 @@ figure img{
         width: 100vw;
         height: 100vh;
         background-color: #89d4fa;
-        background-image: url("./images/이디야커버이미지2x.png");
+        background-image: url("./images/이디야커버이미지.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 0 35%;
@@ -391,7 +391,7 @@ figure img{
     }
     100%{
         top:170px;
-        left:55%
+        left:40%
     }
 }
 @keyframes cherryBlossom2{
@@ -540,7 +540,6 @@ figure img{
             left: 10%;
             opacity: 1;
         }
-
         100% {
             top: 100vh;
             left: 80%;
@@ -554,7 +553,6 @@ figure img{
             left: 18%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 72%;
@@ -568,7 +566,6 @@ figure img{
             left: 25%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 85%;;
@@ -582,7 +579,6 @@ figure img{
             left: 32%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 25%;;
@@ -596,7 +592,6 @@ figure img{
             left: 45%;
             opacity: 1;
         }
-
         100% {
             top: 100vh;
             left: 10%;
@@ -610,7 +605,6 @@ figure img{
             left: 62%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 5%;
@@ -624,7 +618,6 @@ figure img{
             left: 76%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 66%;
@@ -638,7 +631,6 @@ figure img{
             left: 81%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 90%;
@@ -652,7 +644,6 @@ figure img{
             left: 88%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 13%;
@@ -666,7 +657,6 @@ figure img{
             left: 95%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 34%;

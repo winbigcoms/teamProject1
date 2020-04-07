@@ -39,11 +39,7 @@
             <!-- 네비게이션 본체 -->
             <section class="navigationBox" aria-labelledby="navigationHeading">
                 <!-- 메뉴닫기 버튼  -->
-                <button class="resetBtn closeBtn" type="button" title="메뉴닫기" aria-label="메뉴닫기버튼">
-                    메뉴닫기버튼
-                    <span class="cross1" aria-hidden="true"></span>
-                    <span class="cross2" aria-hidden="true"></span>
-                </button>
+
                 <!-- 본 메뉴 리스트 li에 p-top, hover:tranform  -->
                 <ul class="navigationLists resetMargin">
                     <li><a class="navigationItems" href="#">메뉴</a></li>
@@ -53,6 +49,11 @@
                     <li><a class="navigationItems" href="#">공지사항</a></li>
                     <li><a class="navigationItems" href="#">매장찾기</a></li>
                 </ul>
+                <button class="resetBtn closeBtn" type="button" title="메뉴닫기" aria-label="메뉴닫기버튼">
+                    메뉴닫기버튼
+                    <span class="cross1" aria-hidden="true"></span>
+                    <span class="cross2" aria-hidden="true"></span>
+                </button>
             </section>
         </nav>
     </header>
@@ -65,7 +66,7 @@
         <!-- 메뉴 박스 섹션 -->
         <!-- 메뉴 리스트 flex,li 클릭이벤트 -->
         <ul class="menuLists">
-                <li class="menuList" role="button">
+                <li class="menuList" role="button" tabindex="0">
                     <!-- 메뉴 사진 박스 -->
                     <figure class="resetMargin">
                         <img class="menuImg" src="./style/images/ice벗꽃라떼.png" alt="ice벗꽃라떼">
@@ -113,7 +114,7 @@
                         </button>
                     </section>
                 </li>
-                <li class="menuList">
+                <li class="menuList"role="button" tabindex="0">
                     <figure class="resetMargin">
                         <img src="./style/images/HOT벚꽃라떼.png" alt="HOT 벚꽃라떼">
                         <figcaption>HOT 벚꽃 라떼</figcaption>
@@ -154,7 +155,8 @@
                         </button>
                     </section>
                 </li>
-                <li class="menuList">
+                <li class="menuList"
+                role="button" tabindex="0">
                     <figure class="resetMargin">
                         <img src="./style/images/ice브라우니쇼콜라.png" alt="ice 브라우니 쇼콜라">
                         <figcaption>ICED 브라우니 쇼콜라</figcaption>
@@ -196,7 +198,8 @@
                         </button>
                     </section>
                 </li>
-                <li class="menuList">
+                <li class="menuList"
+                role="button" tabindex="0">
                     <figure class="resetMargin">
                         <img src="./style/images/hot브라우니쇼콜라.png" alt="Hot 브라우니 쇼콜라">
                         <figcaption>HOT 브라우니 쇼콜라</figcaption>
@@ -238,7 +241,8 @@
                         </button>
                     </section>
                 </li>
-                <li class="menuList">
+                <li class="menuList"
+                role="button" tabindex="0">
                     <figure class="resetMargin">
                         <img src="./style/images/석류애플라임.png" alt="석류 애플라임">
                         <figcaption>석류애플라임</figcaption>
@@ -280,7 +284,8 @@
                         </button>
                     </section>
                 </li>
-                <li class="menuList">
+                <li class="menuList"
+                role="button" tabindex="0">
                     <figure class="resetMargin">
                         <img src="./style/images/석류오리지날.png" alt="석류오리지날">
                         <figcaption>석류오리지널</figcaption>
@@ -322,7 +327,8 @@
                         </button>
                     </section>
                 </li>
-                <li class="menuList">
+                <li class="menuList"
+                role="button" tabindex="0">
                     <figure class="resetMargin">
                         <img src="./style/images/제주청귤블라썸.png" alt="제주 청귤 블라썸">
                         <figcaption>제주청귤블라썸</figcaption>
@@ -365,7 +371,8 @@
 
                     </section>
                 </li>
-                <li class="menuList">
+                <li class="menuList"
+                role="button" tabindex="0">
                     <figure class="resetMargin">
                         <img src="./style/images/제주청귤오리지날.png" alt="제주청귤오리지날">
                         <figcaption>제주청귤오리지널</figcaption>
