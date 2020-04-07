@@ -59,10 +59,15 @@ for(var i=0; i < exampleCloseBtn.length; i++){
     })
 }
 
+
 var appStartWraper = document.querySelector(".appStartWraper");
-window.addEventListener("load",function(e){
-    // appStartWraper.style.animation="opening 4s 1 forword"
-    setTimeout(function(e){
-        appStartWraper.style.display="none"
-    }, 4100);
-})
+if(document.body.offsetWidth < 530){
+    window.addEventListener("load",function(e){
+        // appStartWraper.style.animation="opening 4s 1 forword"
+        setTimeout(function(e){
+            appStartWraper.style.display="none"
+        }, 5000);
+    })
+}else{
+    appStartWraper.style.display="none"
+}

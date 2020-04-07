@@ -56,25 +56,15 @@ th{
     padding: 0 20px;
     color:#31287c;
     font-weight: bold;
+
 }
+
 .headerHeading a img{
     width: auto;
     height: 50%;
 }
 /* 모바일 어플리케이션 시작 wraper */
-.appStartWraper{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("./images/이디야커버이미지.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 -70px;
-    z-index: 1000;
-    animation: opening 4s 1 forwards;
-}
+
 @keyframes opening{
     0%{
         opacity: 1;
@@ -95,17 +85,17 @@ th{
 .cherryBlossom1{
     top:-60px;
     left: 50%;
-    animation: cherryBlossom1 3.5s forwards;
+    animation: cherryBlossom1 4s ease forwards;
 }
 .cherryBlossom2{
     top:-60px;
     left: 25%;
-    animation: cherryBlossom2 3.5s forwards
+    animation: cherryBlossom2 4s ease forwards
 }
 .cherryBlossom3{
     top:-60px;
     left: 70%;
-    animation: cherryBlossom3 3.5s forwards
+    animation: cherryBlossom3 4s ease forwards
 }
 @keyframes cherryBlossom1{
     0%{
@@ -225,14 +215,7 @@ th{
 .cross2{
     transform: rotate(-45deg);
 }
-/* 메뉴 리스트 */
-.menuLists li a{
-    border-bottom: 1px solid rgba(24, 24, 181, 0.3);
-    display:block;
-    font-size: 1em;
-    color:#fff;
-    padding: 15px 0 15px 30px;
-}
+
 /* 메인 섹션 공통 코드 */
 .main{
     width: 80%;
@@ -246,22 +229,26 @@ th{
     margin:0 auto;
     padding: 40px 0;
 }
-
-
-
 /* 메인메뉴 */
 .menuLists{
-    margin:0 auto;
     width:100%;
     display:flex;
     justify-content: space-between;
     flex-flow: wrap;
 }
+/* 메뉴 리스트 */
 .menuList{
     cursor: pointer;
     position: relative;
 }
 
+.menuLists li a{
+    border-bottom: 1px solid rgba(24, 24, 181, 0.3);
+    display:block;
+    font-size: 1em;
+    color:#fff;
+    padding: 15px 0 15px 30px;
+}
 .menuList figure{
     box-sizing: border-box;
     width:100%;
@@ -286,6 +273,7 @@ figure img{
     padding: 10px 0 20px 0;
 }
 /* 메뉴 상세 */
+
 /* 메뉴 상세 설명 박스 */
 .menuExplain{
     position: absolute;
@@ -302,7 +290,6 @@ figure img{
     display:none
 }
 /* 이벤트 사용을 위한 모듈 */
-/* opacity 보이기 */
 .show{
     display:block;
     cursor: text;
@@ -331,9 +318,10 @@ figure img{
     margin:0 auto;
     border-collapse: collapse;
 }
-.menuIngredientTable tr td{
+.menuIngredientTable tr td,.menuIngredientTable tr th{
     font-size: 0.8em;
     padding: 0 10px;
+    white-space: nowrap;
 }
 .menuIngredientTable tr th:nth-child(n+2){
     border-left: 1px solid #000;
@@ -355,6 +343,25 @@ figure img{
     .menuList:not(:first-child){
         margin-top: 20px;
     }
+    /* 모바일 어플리케이션 시작 wraper */
+    .appStartWraper{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #89d4fa;
+        background-image: url("./images/이디야커버이미지2x.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 35%;
+        border: 1px solid #89d4fa;
+        z-index: 1000;
+        animation: opening 4s 1 forwards;
+    }
+    /* .appStartWraper{
+        background-position: 0 50%;
+    } */
 }
 @media(min-width:530px){
     .main{
@@ -365,5 +372,63 @@ figure img{
     }
     .menuList:nth-child(n+3){
         margin-top: 30px;
+    }
+    .headerHeading a{
+        transform: translateX(-100%);
+        animation: logo 1s forwards 1s;
+    }
+    @keyframes logo{
+        0%{
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .openNavigationBtn{
+        transform: translateX(100%);
+        animation: btn 1s forwards 1s;
+    }
+    @keyframes btn {
+        0%{
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .menuList{
+        transform: translateY(-50px);
+        animation: MenuList 1s forwards 2s;
+        opacity: 0;
+    }
+    .menuList:nth-child(2){
+        transform: translateY(-50px);
+        animation: MenuList 1s forwards 2.2s;
+        opacity: 0;
+    }
+    .menuList:nth-child(3){
+        transform: translateY(-50px);
+        animation: MenuList 1s forwards 2.4s;
+        opacity: 0;
+    }
+    .menuList:nth-child(4){
+        transform: translateY(-50px);
+        animation: MenuList 1s forwards 2.6s;
+        opacity: 0;
+    }
+    @keyframes MenuList {
+        0%{
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 }
