@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="/css/index.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="headerHeading resetmargin">
+                <a
+                    aria-label="이디아 메인 홈페이지 이동링크 이미지"
+                    href="https://www.ediya.com/"
+                    title="이디아 커피 홈페이지로 이동"
+                    target="_blank">
+                    <img src="/css/image/Logo.svg" alt="이디아 커피 로고"/>
+                </a>
+            </h1>
+        </header>
+        <nav class="navigation">
+            <h2 
+            class="a11yHidden" 
+            id="navigationHeading">
+            메뉴 네비게이션 영역</h2>
+            <button class="openNavigationBtn resetBtn"
+            type="button"
+            aria-label="메뉴 열기 버튼"
+            title="메뉴 열기">
+                <span class="burgerbar1" aria-hidden="true"></span>
+                <span class="burgerbar2" aria-hidden="ture"></span>
+                <span class="burgerbar3" aria-hidden="ture"></span>
+            </button>
+            <section class="navigationBox" 
+            aria-labelledby="navigationHeading">
+                <button class="closeBtn"
+                type="button"
+                aria-lable="메뉴 닫기 버튼"
+                title="메뉴 닫기">
+                    <span class="burgerbarCross1"></span>
+                    <span class="burgerbarCross2"></span>
+                </button>
+                <ul class="navigationList resetmargin">
+                    <li><a class="navigationItems">메뉴</a></li>
+                    <li><a class="navigationItems">이디아멤버스</a></li>
+                    <li><a class="navigationItems">이디아커피랩</a></li>
+                    <li><a class="navigationItems">이디아컬쳐랩</a></li>
+                    <li><a class="navigationItems">공지사항</a></li>
+                    <li><a class="navigationItems">매장찾기</a></li>
+                </ul>
+            </section>
+        </nav>
+    </body>
+</html>
