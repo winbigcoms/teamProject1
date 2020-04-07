@@ -1,0 +1,173 @@
+@import url(/css/normalize.css);
+
+/*CSS module*/
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.a11yHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+figure{
+    margin: 0;
+}
+
+/*button 공용*/
+
+.openNavigationBtn:hover{
+    cursor: pointer;
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+/*Box size*/
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+/*header*/
+
+.header{
+    height: 80px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+.headerHeading{
+    margin:0;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+/*open-btn*/
+
+.openNavigationBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;  
+    border-style: none;
+    background-color: pink;
+}
+/*Btn-design*/
+
+span[class*="burgerbar"] {
+    position: absolute;
+    background-color: red;
+    left: 0;
+    width: 35%;
+    height: 5%;
+}
+
+.burgerbar1{
+    top: 35%;
+    margin-left: 35%;
+}
+
+.burgerbar2{
+    top: 50%;
+    margin-left: 35%; 
+    transform: translateY(-50%);
+}
+
+.burgerbar3{
+    top: 65%;
+    margin-left: 35%;
+    transform: translateY(-100%);
+}
+
+/*navigation Box*/
+
+.navigation{
+    position: relative;
+    
+}
+.navigationBox {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10vh;
+    background-color:rgba(20, 24, 44, 0.9);
+    transform: translateX(105%);
+}   
+
+.navigationList li{
+    border-bottom: 1px solid rgba(245, 244, 251, 0.3);}
+
+.navigationList:first-child{
+    padding-top: 15%;
+}
+/*navigation List*/
+.navigationItems{
+    padding: 15px;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+/*navigation Btn*/
+.closeBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: none;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0)
+    /*버튼의 백그라운드 컬러를 완전히 투명으로 하여 색을 맞춤*/
+}
+
+.burgerbarCross1{ 
+    top:45%;
+    right:40%;
+    transform: rotate(45deg);
+    margin-left: 35%;
+     }
+
+.burgerbarCross2{
+    top: 45%;
+    right:40%;
+    transform: rotate(-45deg);
+    margin-left: 35%;
+}
+
+/*navigation act*/
+.closeBtn:hover{
+    transform: scale(1.2, 1.2);
+
+}
+
+.navigationList li:hover{
+    background-color:rgba(20, 24, 44, 0.7);
+}
+
+
+@media screen and (max-width: ){
+    /*모바일 디바이스*/
+
+}
+
+
+@media screen and (min-width: ){
+    /*데스크탑 디바이스*/
+}
