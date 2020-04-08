@@ -1,5 +1,4 @@
-#teamProject1
+#오타수정
 
-팀프로젝트수정2차
-git test
+a11y-hidden -> a11yHidden  오타수정
 
