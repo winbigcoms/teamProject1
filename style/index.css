@@ -55,16 +55,10 @@ th{
     height: 100%;
     line-height: 80px;    
 }
-
-
-
 .headerHeading a{
     display:inline-block;
     height: 100%;
     padding: 0 20px;
-    color:#31287c;
-    font-weight: bold;
-
 }
 
 .headerHeading a img{
@@ -239,14 +233,13 @@ th{
     background-color: #eee;
     transition: all 0.3s;
     overflow: hidden;
+    text-align: center;
 }
 figure img{
-    display:block;
-    margin: 0 auto;
+    display:inline-block;
     width: 200px;
     height: auto;
     transition: all 0.5s;
-    padding: 10px 0;
 }
 .menuList:hover > figure img{
     transform: scale(1.1);
@@ -296,6 +289,9 @@ figure img{
     font-size: 0.8em;
     color: #999999
 }
+.menuDescription{
+    text-align: justify;
+}
 /* 메뉴 성분 분석표 asdadasd*/
 .menuIngredient{
     position: absolute;
@@ -303,20 +299,24 @@ figure img{
     bottom: 0;
     left:0;
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: #eee;
 }
 .menuIngredientTable{
+    width:80%;
     margin:0 auto;
     border-collapse: collapse;
 }
 .menuIngredientTable tr td,.menuIngredientTable tr th{
     font-size: 0.8em;
-    padding: 0 10px;
+    width:25%;
     white-space: nowrap;
+    font-weight: 400;
 }
+
 .menuIngredientTable tr th:nth-child(n+2){
     border-left: 1px solid #000;
+    padding-left: 2%;
 }
 /* 상세 설명 닫기 박스 */
 .exampleBtn{
@@ -350,12 +350,23 @@ figure img{
         background-position: 0 35%;
         border: 1px solid #89d4fa;
         z-index: 1000;
-        animation: opening 4s 1 backwards;
+        animation: opening 4s 1 forwards;
+    }
+    .headerHeading a img{
+        /* width:45%; */
+        height:25%;
+    }
+    .flowerRainBox{
+        display:none;
     }
     /* .appStartWraper{
         background-position: 0 50%;
     } */
-    
+    /* .menuIngredientTable tr td,.menuIngredientTable tr th{
+        font-size: 0.6em;
+        padding: 0 10px;
+        white-space: nowrap;
+    } */
 @keyframes opening{
     0%{
         opacity: 1;

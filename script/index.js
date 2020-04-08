@@ -5,7 +5,6 @@ var closeNaviBtn = document.querySelector(".closeBtn");
 var menuList = document.querySelectorAll(".menuList");
 var menuExplain = document.querySelectorAll(".menuExplain");
 var exampleCloseBtn = document.querySelectorAll(".exampleBtn");
-// var exampleCloseBtnCross = document.querySelectorAll(".exampleBtn span");
 var navigationItems = document.querySelectorAll(".navigationItems");
 
 
