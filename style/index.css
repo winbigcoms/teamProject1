@@ -137,7 +137,7 @@ th{
         opacity: 1;
     }
     100% {
-        top: 100%;
+        top: 100vh;
         left: 72%;
         opacity:0;
     }
@@ -150,7 +150,7 @@ th{
         opacity: 1;
     }
     100% {
-        top: 100%;
+        top: 100vh;
         left: 85%;;
         opacity:0;
     }
@@ -163,7 +163,7 @@ th{
         opacity: 1;
     }
     100% {
-        top: 100%;
+        top: 100vh;
         left: 25%;;
         opacity:0;
     }
@@ -189,7 +189,7 @@ th{
         opacity: 1;
     }
     100% {
-        top: 100%;
+        top: 100vh;
         left: 5%;
         opacity:0;
     }
@@ -202,7 +202,7 @@ th{
         opacity: 1;
     }
     100% {
-        top: 100%;
+        top: 100vh;
         left: 66%;
         opacity:0;
     }
@@ -215,7 +215,7 @@ th{
         opacity: 1;
     }
     100% {
-        top: 100%;
+        top: 100vh;
         left: 90%;
         opacity:0;
     }
@@ -228,7 +228,7 @@ th{
         opacity: 1;
     }
     100% {
-        top: 100%;
+        top: 100vh;
         left: 13%;
         opacity:0;
     }
@@ -241,7 +241,7 @@ th{
         opacity: 1;
     }
     100% {
-        top: 100%;
+        top: 100vh;
         left: 34%;
         opacity:0;
     }
@@ -539,7 +539,8 @@ figure img{
 
 @media(max-width:560px) {
     .menuList {
-        width: 100%;
+        width: 80%;
+        margin: 30px auto 0;
     }
 
     /* 모바일 어플리케이션 시작 wraper */
@@ -605,43 +606,33 @@ figure img{
         z-index: -1;
     }
     .flowerRainBox img:nth-child(1){
-        /* left: 10%; */
         animation: flower1 infinite ease-in-out  10s 1s;
     }
     .flowerRainBox img:nth-child(2){
-        /* left: 18%; */
         animation: flower2 infinite ease-in-out   10s 5s;
     }
     .flowerRainBox img:nth-child(3){
-        left: 25%;
         animation: flower3 infinite ease-in-out   10s 2s;
     }
     .flowerRainBox img:nth-child(4){
-        left: 32%;
         animation: flower4 infinite ease-in   10s 1s;
     }
     .flowerRainBox img:nth-child(5){
-        left: 45%;
-        animation: flower5 infinite ease-out   10s;
+        animation: flower5 infinite ease-out   10s 1s;
     }
     .flowerRainBox img:nth-child(6){
-        left: 62%;
         animation: flower6 infinite ease-in-out   10s 5s;
     }
     .flowerRainBox img:nth-child(7){
-        left: 76%;
         animation: flower7 infinite ease-out   10s 2s;
     }
     .flowerRainBox img:nth-child(8){
-        left: 81%;
         animation: flower8 infinite ease-in   10s 1.5s;
     }
     .flowerRainBox img:nth-child(9){
-        left: 88%;
         animation: flower9 infinite ease-out   10s 5s;
     }
     .flowerRainBox img:nth-child(10){
-        left: 95%;
-        animation: flower10 infinite ease-in-out 10s;
+        animation: flower10 infinite ease-in-out 10s 1s;
     }
 }
