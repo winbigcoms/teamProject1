@@ -53,7 +53,7 @@ th{
 /* 헤더 로고부분! */
 .headerHeading{
     height: 100%;
-    line-height: 80px;    
+    line-height: 85px;    
 }
 .headerHeading a{
     display:inline-block;
@@ -170,9 +170,7 @@ th{
 /* 메인 섹션 공통 코드 */
 .main{
     width: 80%;
-    margin:0 auto;
-    margin-top: 100px;
-
+    margin:100px auto 0;
 }
 .menuSection{
     width:100%;
@@ -181,7 +179,7 @@ th{
 .menuLists{
     width:100%;
     max-width: 800px;
-    margin:0 auto;
+    margin:100px auto 0;
     padding: 40px 0;
     display:flex;
     justify-content: space-between;
@@ -191,24 +189,8 @@ th{
 .menuList{
     cursor: pointer;
     position: relative;
+}
 
-    /* animation-name: list;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards; */
-}
-/* 메뉴 애니메이션 */
-/* .menuList:nth-child(1){
-    animation-delay: 3.2s;
-}
-.menuList:nth-child(2){
-    animation-delay: 3.4s;
-}
-.menuList:nth-child(3){
-    animation-delay: 3.6s;
-}
-.menuList:nth-child(4){
-    animation-delay: 3.8s;
-} */
 @keyframes list{
     0%{
         opacity: 0;
@@ -243,9 +225,14 @@ figure img{
     height: auto;
     transition: all 0.5s;
 }
+.menuList figure img[src*="브라우니"]{
+    transform: scale(0.9);
+}
 .menuList:hover > figure img{
     transform: scale(1.1);
-
+}
+.menuList:hover figure img[src*="브라우니"]{
+    transform: scale(1);
 }
 .menuList figcaption{
     text-align: center;
@@ -350,7 +337,7 @@ figure img{
         background-position: 0 35%;
         border: 1px solid #89d4fa;
         z-index: 1000;
-        animation: opening 4s 1 forwards;
+        animation: opening 4s 1 both;
     }
     .headerHeading a img{
         /* width:45%; */
@@ -430,7 +417,6 @@ figure img{
     .menuList{
         width:48%;
     }
-
     .openNavigationBtn{
         animation-name: navBtn;
         animation-delay: 3s;
@@ -438,27 +424,29 @@ figure img{
         animation-fill-mode: backwards;
     }
     .headerHeading a{
-        transform: translateX(-100%);
-        animation: logo 1s forwards 0.2s;
+        /* transform: translateX(-100%); */
+        /* animation: logo 1s both 0.2s; */
+        animation-name: logo;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-delay: 0.2s;
     }
     @keyframes logo{
         0%{
             transform: translateX(-100%);
-            opacity: 0;
         }
         100%{
             transform: translateX(0);
-            opacity: 1;
+            /* opacity: 1; */
         }
     }
     .openNavigationBtn{
-        transform: translateX(100%);
-        animation: btn 1s forwards 0.2s;
+        /* transform: translateX(100%); */
+        animation: btn 1s both 0.2s;
     }
     @keyframes btn {
         0%{
             transform: translateX(100%);
-            opacity: 0;
         }
         100%{
             transform: translateX(0);
@@ -467,29 +455,25 @@ figure img{
     }
     .menuList{
         transform: translateY(-50px);
-        animation: MenuList 1s forwards 1s;
-        opacity: 0;
+        animation: MenuList 1s both 1s;
     }
     
     .menuList:nth-child(2){
         transform: translateY(-50px);
-        animation: MenuList 1s forwards 1.2s;
-        opacity: 0;
+        animation: MenuList 1s both 1.2s;
     }
     .menuList:nth-child(3){
         transform: translateY(-50px);
-        animation: MenuList 1s forwards 1.4s;
-        opacity: 0;
+        animation: MenuList 1s both 1.4s;
     }
     .menuList:nth-child(4){
         transform: translateY(-50px);
-        animation: MenuList 1s forwards 1.6s;
-        opacity: 0;
+        animation: MenuList 1s both 1.6s;
     }
     @keyframes MenuList {
         0%{
             transform: translateY(50px);
-            opacity: 0;
+             opacity: 0;
         }
         100%{
             transform: translateY(0);
