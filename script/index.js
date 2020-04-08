@@ -49,6 +49,21 @@ closeNaviBtn.addEventListener("click", function (e) {
     // function은 navigationBox 즉 navigationBox이라는 클래스명을 갖는 html태그에 
     // classList.remove("openNavi") > openNavi라는 클래스를 지운다. 
 })
+
+//닫기 버튼에서 tab을 누르면 다시 첫번째 네비게이션 요소로 이동하기
+closeNaviBtn.addEventListener("keydown",function(e){
+    //키보드 키를 누를때 이벤트 발생하도록 이벤트 생성
+    e.preventDefault();
+    // 이벤트가 일어나는 요소의 기본이벤트를 막기
+    if(e.keyCode == 9){
+        //만약 눌러진 키가 tab이라면
+        var firstNaviItem = document.querySelector(".navigationItems");
+        firstNaviItem.focus();
+        //첫 네비게이션 요소에 포커스 주기
+    }
+})
+
+
 // 네비게이션 클릭 
 for(var i =0; i < navigationItems.length; i++){
     // 변수 i는 0인데 , navigationItems 즉 navigationItems이라는 클래스를 갖는 html태그들의 집합인
