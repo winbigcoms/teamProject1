@@ -36,12 +36,23 @@ for(var i =1; i < navigationItems.length; i++){
 
 // 상세 설명 열기
 for(var i=0; i < menuList.length; i++){
+    // 클릭시 열기
     menuList[i].addEventListener("click",function(e){
         var getTarget = e.currentTarget;
         getTarget.querySelector(".menuExplain").classList.add("show");
         setTimeout(function(e){
             getTarget.querySelector(".menuExplain").style.opacity="1"
         }, 100)
+    })
+    // 엔터 입력시 열기
+    menuList[i].addEventListener("keypress",function(e){
+        if(e.keyCode == "13"){
+            var getTarget = e.currentTarget;
+        getTarget.querySelector(".menuExplain").classList.add("show");
+        setTimeout(function(e){
+            getTarget.querySelector(".menuExplain").style.opacity="1"
+        }, 100)
+        }
     })
 }
 
@@ -63,7 +74,6 @@ for(var i=0; i < exampleCloseBtn.length; i++){
 var appStartWraper = document.querySelector(".appStartWraper");
 if(document.body.offsetWidth < 530){
     window.addEventListener("load",function(e){
-        // appStartWraper.style.animation="opening 4s 1 forword"
         setTimeout(function(e){
             appStartWraper.style.display="none"
         }, 5000);

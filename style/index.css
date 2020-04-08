@@ -44,6 +44,11 @@ th{
     border-bottom: 1px solid rgba(0,0,0,0.2);
     background-color: rgba(255,255,255,0.7);
     z-index:3;
+    animation: header 0.5s 
+}
+@keyframes header{
+    0%{ transform: translateY(-100%);}
+    100%{transform: translateY(0)}
 }
 /* 헤더 로고부분! */
 .headerHeading{
@@ -81,7 +86,6 @@ th{
     height: 80px;
     background-color: #fff;
     transition: all 0.7s;
-
 }
 /* 네비게이션버튼 애니메이션 */
 @keyframes navBtn{
@@ -340,13 +344,13 @@ figure img{
         width: 100vw;
         height: 100vh;
         background-color: #89d4fa;
-        background-image: url("./images/이디야커버이미지2x.png");
+        background-image: url("./images/이디야커버이미지.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 0 35%;
         border: 1px solid #89d4fa;
         z-index: 1000;
-        animation: opening 4s 1 forwards;
+        animation: opening 4s 1 backwards;
     }
     /* .appStartWraper{
         background-position: 0 50%;
@@ -390,8 +394,8 @@ figure img{
         left: 50%;
     }
     100%{
-        top:170px;
-        left:55%
+        top:150px;
+        left:38%
     }
 }
 @keyframes cherryBlossom2{
@@ -400,7 +404,7 @@ figure img{
         left:25%;
     }
     100%{
-        top:400px;
+        top:300px;
         left:40%        
     }
 }
@@ -410,7 +414,7 @@ figure img{
         left: 70%;
     }
     100%{
-        top:440px;
+        top:340px;
         left:53%
     }
 }
@@ -433,7 +437,7 @@ figure img{
     }
     .headerHeading a{
         transform: translateX(-100%);
-        animation: logo 1s forwards 1s;
+        animation: logo 1s forwards 0.2s;
     }
     @keyframes logo{
         0%{
@@ -447,7 +451,7 @@ figure img{
     }
     .openNavigationBtn{
         transform: translateX(100%);
-        animation: btn 1s forwards 1s;
+        animation: btn 1s forwards 0.2s;
     }
     @keyframes btn {
         0%{
@@ -461,22 +465,22 @@ figure img{
     }
     .menuList{
         transform: translateY(-50px);
-        animation: MenuList 1s forwards 2s;
+        animation: MenuList 1s forwards 1s;
         opacity: 0;
     }
     .menuList:nth-child(2){
         transform: translateY(-50px);
-        animation: MenuList 1s forwards 2.2s;
+        animation: MenuList 1s forwards 1.2s;
         opacity: 0;
     }
     .menuList:nth-child(3){
         transform: translateY(-50px);
-        animation: MenuList 1s forwards 2.4s;
+        animation: MenuList 1s forwards 1.4s;
         opacity: 0;
     }
     .menuList:nth-child(4){
         transform: translateY(-50px);
-        animation: MenuList 1s forwards 2.6s;
+        animation: MenuList 1s forwards 1.6s;
         opacity: 0;
     }
     @keyframes MenuList {
@@ -540,7 +544,6 @@ figure img{
             left: 10%;
             opacity: 1;
         }
-
         100% {
             top: 100vh;
             left: 80%;
@@ -554,7 +557,6 @@ figure img{
             left: 18%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 72%;
@@ -568,7 +570,6 @@ figure img{
             left: 25%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 85%;;
@@ -582,7 +583,6 @@ figure img{
             left: 32%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 25%;;
@@ -596,7 +596,6 @@ figure img{
             left: 45%;
             opacity: 1;
         }
-
         100% {
             top: 100vh;
             left: 10%;
@@ -610,7 +609,6 @@ figure img{
             left: 62%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 5%;
@@ -624,7 +622,6 @@ figure img{
             left: 76%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 66%;
@@ -638,7 +635,6 @@ figure img{
             left: 81%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 90%;
@@ -652,7 +648,6 @@ figure img{
             left: 88%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 13%;
@@ -666,7 +661,6 @@ figure img{
             left: 95%;
             opacity: 1;
         }
-
         100% {
             top: 100%;
             left: 34%;
