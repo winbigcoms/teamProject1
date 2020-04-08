@@ -1,4 +1,4 @@
-#teamProject1
+#오타수정
 
-pull add commit push
+higgen->hidden 오타수정
 
