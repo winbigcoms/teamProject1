@@ -219,7 +219,9 @@ th{
         transform: translateY(0%);
     }
 }
-
+.menuList{
+    margin: 10px 0;
+}
 .menuLists li a{
     border-bottom: 1px solid rgba(24, 24, 181, 0.3);
     display:block;
@@ -329,13 +331,11 @@ figure img{
 }
 
 
-@media(max-width:529px){
+@media(max-width:560px){
     .menuList{
         width:100%;
     }
-    .menuList:not(:first-child){
-        margin-top: 20px;
-    }
+
     /* 모바일 어플리케이션 시작 wraper */
     .appStartWraper{
         position: absolute;
@@ -359,14 +359,7 @@ figure img{
     .flowerRainBox{
         display:none;
     }
-    /* .appStartWraper{
-        background-position: 0 50%;
-    } */
-    /* .menuIngredientTable tr td,.menuIngredientTable tr th{
-        font-size: 0.6em;
-        padding: 0 10px;
-        white-space: nowrap;
-    } */
+
 @keyframes opening{
     0%{
         opacity: 1;
@@ -430,16 +423,14 @@ figure img{
     }
 }
 }
-@media(min-width:530px){
+@media(min-width:561px){
     .main{
-        max-width: 1000px;
+        max-width: 800px;
     }
     .menuList{
         width:48%;
     }
-    .menuList:nth-child(n+3){
-        margin-top: 30px;
-    }
+
     .openNavigationBtn{
         animation-name: navBtn;
         animation-delay: 3s;
@@ -479,6 +470,7 @@ figure img{
         animation: MenuList 1s forwards 1s;
         opacity: 0;
     }
+    
     .menuList:nth-child(2){
         transform: translateY(-50px);
         animation: MenuList 1s forwards 1.2s;

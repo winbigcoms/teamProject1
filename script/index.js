@@ -1,7 +1,6 @@
 var openNaviBtn = document.querySelector(".openNavigationBtn");
 var navigationBox = document.querySelector(".navigationBox");
 var closeNaviBtn = document.querySelector(".closeBtn");
-
 var menuList = document.querySelectorAll(".menuList");
 var menuExplain = document.querySelectorAll(".menuExplain");
 var exampleCloseBtn = document.querySelectorAll(".exampleBtn");
@@ -17,11 +16,13 @@ closeNaviBtn.addEventListener("click", function (e) {
     navigationBox.classList.remove("openNavi")
 })
 // 네비게이션 클릭 
-for(var i =1; i < navigationItems.length; i++){
+for(var i =0; i < navigationItems.length; i++){
     // 최초클릭확인
+
     var isThemeOn = false;
     // 클릭 이벤트
     navigationItems[i].addEventListener("click",function(e){
+        console.log(e)
         var themeSkyblue = document.querySelector(".backgroundSkyblue")
         // 존재하면 지우고 
         if(isThemeOn == true){
