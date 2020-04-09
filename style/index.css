@@ -28,35 +28,32 @@ th{
     overflow: hidden;
     clip: rect(0,0,0,0);
 }
-/* 애니메이션 */
 
+/* 애니메이션 */
 /* 로딩 애니메이션 헤더 */
 @keyframes header{
     0%{ transform: translateY(-100%);}
     100%{transform: translateY(0)}
 }
-
 /* 로딩 애니메이션 로고 */
 @keyframes logo{
     0%{
-        transform: translateX(-110%);
+        transform: translateX(-100%);
     }
     100%{
         transform: translateX(0);
     }
 }
-
 /* 로딩 애니메이션 버튼 */
 @keyframes btn {
     0%{
-        transform: translateX(110%);
+        transform: translateX(100%);
     }
     100%{
         transform: translateX(0);
         opacity: 1;
     }
 }
-
 /* 로딩 애니메이션 메뉴 */
 @keyframes MenuList {
     0%{
@@ -68,7 +65,6 @@ th{
         opacity: 1;
     }
 }
-
 /* 모바일 오프닝 애니 */
 @keyframes opening{
     0%{
@@ -115,7 +111,6 @@ th{
         left:53%
     }
 }
-
 /* 데스크탑 꽃잎 애니메이션 */
 @keyframes flower1 {
     0% {
@@ -129,7 +124,6 @@ th{
         opacity: 0;
     }
 }
-
 @keyframes flower2 {
     0% {
         top: -10vh;
@@ -142,7 +136,6 @@ th{
         opacity:0;
     }
 }
-
 @keyframes flower3 {
     0% {
         top: -10vh;
@@ -155,7 +148,6 @@ th{
         opacity:0;
     }
 }
-
 @keyframes flower4 {
     0% {
         top: -10vh;
@@ -168,7 +160,6 @@ th{
         opacity:0;
     }
 }
-
 @keyframes flower5 {
     0% {
         top: -10vh;
@@ -181,7 +172,6 @@ th{
         opacity:0;
     }
 }
-
 @keyframes flower6 {
     0% {
         top: -10vh;
@@ -194,7 +184,6 @@ th{
         opacity:0;
     }
 }
-
 @keyframes flower7 {
     0% {
         top: -10vh;
@@ -207,7 +196,6 @@ th{
         opacity:0;
     }
 }
-
 @keyframes flower8 {
     0% {
         top: -10vh;
@@ -220,7 +208,6 @@ th{
         opacity:0;
     }
 }
-
 @keyframes flower9 {
     0% {
         top: -10vh;
@@ -233,7 +220,6 @@ th{
         opacity:0;
     }
 }
-
 @keyframes flower10 {
     0% {
         top: -10vh;
@@ -272,7 +258,7 @@ th{
     animation-name: logo;
     animation-duration: 1s;
     animation-fill-mode: both;
-    animation-delay: 0.4s;
+    animation-delay: 0.2s;
 }
 
 
@@ -340,7 +326,7 @@ th{
     transform: translateX(0); 
 }
 .openNavigationBtn{
-    animation: btn 1s both 0.4s;
+    animation: btn 1s both 0.2s;
 }
 
     /* 공통 닫기 버튼 */
@@ -381,29 +367,27 @@ th{
 }
 .menuSection{
     width:100%;
+
 }
 /* 메인메뉴 */
 .menuLists{
     width:100%;
     max-width: 800px;
-    margin:100px auto 0;
+    margin: 100px auto 0;
     padding: 40px 0;
     display:flex;
     justify-content: space-between;
     flex-flow: wrap;
 }
-/* 메뉴 리스트 */
+/* 메뉴 리스트 박스 */
 .menuList{
     cursor: pointer;
     position: relative;
     margin: 10px 0;
-}
-
-
-.menuList{
     transform: translateY(-50px);
     animation: MenuList 1s both 1s;
 }
+
 
 .menuList:nth-child(2){
     transform: translateY(-50px);
@@ -417,7 +401,7 @@ th{
     transform: translateY(-50px);
     animation: MenuList 1s both 1.6s;
 }
-
+/* 개별 메뉴  */
 .menuList{
     margin: 10px 0;
 }
@@ -518,6 +502,7 @@ figure img{
     width:25%;
     white-space: nowrap;
     font-weight: 400;
+    text-align: left;
 }
 
 .menuIngredientTable tr th:nth-child(n+2){
@@ -533,8 +518,7 @@ figure img{
 .exampleBtn span{
     background-color: #000;
 }
-
-
+/* 모바일 버전 */
 @media(max-width:560px) {
     .menuList {
         width: 90%;
@@ -557,9 +541,7 @@ figure img{
         z-index: 1000;
         animation: opening 4s 1 both;
     }
-    .headerHeading{
-        line-height: 75px;
-    }
+
     .headerHeading a img {
         height: 25%;
     }
@@ -571,7 +553,7 @@ figure img{
     [class*=cherryBlossom] {
         position: absolute;
     }
-
+    /* 모바일 베너 이미지 꽃 애니메이션 */
     .cherryBlossom1 {
         top: -60px;
         left: 50%;
@@ -598,7 +580,8 @@ figure img{
     .menuList{
         width:48%;
     }
-
+    
+/* 데스크탑 배경 꽃비 애니메이션 */
     .flowerRainBox img{
         position: absolute;
         top: -10vh;

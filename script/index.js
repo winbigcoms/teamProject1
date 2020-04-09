@@ -1,4 +1,3 @@
-
 var openNaviBtn = document.querySelector(".openNavigationBtn");
 // openNavigationBtn 이라는 클래스를 가진 태그들을 모두 openNaviBtn이라는 변수로 부르겠다 선언
 // 단 querySeletor는 그 태그들 중 가장 첫 번째의 태그만을 선택한다.
