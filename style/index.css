@@ -39,7 +39,7 @@ th{
 /* 로딩 애니메이션 로고 */
 @keyframes logo{
     0%{
-        transform: translateX(-100%);
+        transform: translateX(-110%);
     }
     100%{
         transform: translateX(0);
@@ -49,7 +49,7 @@ th{
 /* 로딩 애니메이션 버튼 */
 @keyframes btn {
     0%{
-        transform: translateX(100%);
+        transform: translateX(110%);
     }
     100%{
         transform: translateX(0);
@@ -266,15 +266,13 @@ th{
     line-height: 85px;    
 }
 .headerHeading a{
-    display:inline-block;
-    height: 100%;
     padding: 0 20px;
 }
-.headerHeading a{
+.headerHeading a img{
     animation-name: logo;
     animation-duration: 1s;
     animation-fill-mode: both;
-    animation-delay: 0.2s;
+    animation-delay: 0.4s;
 }
 
 
@@ -342,7 +340,7 @@ th{
     transform: translateX(0); 
 }
 .openNavigationBtn{
-    animation: btn 1s both 0.2s;
+    animation: btn 1s both 0.4s;
 }
 
     /* 공통 닫기 버튼 */
@@ -559,9 +557,10 @@ figure img{
         z-index: 1000;
         animation: opening 4s 1 both;
     }
-
+    .headerHeading{
+        line-height: 75px;
+    }
     .headerHeading a img {
-        /* width:45%; */
         height: 25%;
     }
 
