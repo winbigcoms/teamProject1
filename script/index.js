@@ -33,7 +33,6 @@ window.addEventListener("keydown",function(e){
         console.log("1")
         e.preventDefault();
     }
-    
 })
 
 // 네비게이션 열기
@@ -80,7 +79,7 @@ closeNaviBtn.addEventListener("keydown",function(e){
         navigationItems[0].focus();
         //첫 네비게이션 요소에 포커스 주기
     }else if(e.keyCode == 13 || e.keyCode == 27 || e.keyCode == 39){
-    e.preventDefault();
+        e.preventDefault();
         
         // 만약 눌러진 키가 enter(13) 혹은 esc(27) 혹은 오른쪽 화살표(39) 이라면
         navigationBox.classList.remove("openNavi");
@@ -94,7 +93,7 @@ closeNaviBtn.addEventListener("keydown",function(e){
         // previousElementSibling html상에서 이전에 존재하는 형재 태그 중
         // lastElementChild 마지막 자식요소를 선택
 
-        targetOn.childNodes[0].focus();
+        targetOn.firstElementChild.focus();
         // lastElemtChild 는 li라서 포커스가 안되요. 그래서 그 자식요소인 a 태그를 선택
         // childNodes 는 배열로 선택되니까 첫 번째 자식요소는 0번이 되겠죠?
         // .focus() 그거에 포커스를 준다.
@@ -152,6 +151,7 @@ for(var i =0; i < navigationItems.length; ++i){
             // e.currentTarget 현제 이벤트가 발생한 태그에서
             // parentNode html상에서 부모 태그에서
             // nextElementSibling 부모 태그의 형제 레벨의 태그에서 부모 다음에 존재하는
+            
             // 태그를 선택
             if( !nextTarget ){
                 //만약 위에서 선택한 태그가 존재하지 않으면 ! > 없다. not 의 의미에요
@@ -160,7 +160,9 @@ for(var i =0; i < navigationItems.length; ++i){
             }
             else if(nextTarget){
                 // 만약 존재한다면 
-                nextTarget.childNodes[0].focus(); 
+
+                //nextTarget.childNodes[0].focus(); 
+                nextTarget.lastElementChild.focus(); 
                 //위에서 선언한 태그의 자식요소 중 첫 번째 
                 //여기선 a태그가 되겠죠? 거기에 포커싱
             } 
@@ -178,7 +180,7 @@ for(var i =0; i < navigationItems.length; ++i){
                 //버튼에 포커싱
             }else if(prevTarget){
                 //존재하면
-                prevTarget.childNodes[0].focus();
+                prevTarget.lastElementChild.focus();
                 //위에서 선언한 태그의 자식태그 인 a태그에 포커싱
             }
         }
