@@ -279,6 +279,7 @@ th{
     height: 80px;
     background-color: #fff;
     transition: all 0.7s;
+    z-index:4;
 }
 
 .openNavigationBtn:hover{
@@ -304,6 +305,7 @@ th{
     transform: translateX(110%);
     transition: all 0.5s;
     background-color: rgba(20, 24, 44, 0.9);
+    z-index:4;
 }
 .navigationLists{
     margin-top: 60px;
@@ -336,9 +338,6 @@ th{
     right: 25px;
     width:50px;
     height: 50px;
-    text-indent: 50px;
-    white-space: nowrap;
-    overflow: hidden;
     background-color: transparent;
     transition: all 0.3s;
 }
@@ -367,7 +366,6 @@ th{
 }
 .menuSection{
     width:100%;
-
 }
 /* 메인메뉴 */
 .menuLists{
@@ -379,6 +377,7 @@ th{
     justify-content: space-between;
     flex-flow: wrap;
 }
+
 /* 메뉴 리스트 박스 */
 .menuList{
     cursor: pointer;

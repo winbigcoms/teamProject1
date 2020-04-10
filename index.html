@@ -12,14 +12,14 @@
 <body>
     <header class="header">
         <!-- 헤더 width: 100% position fixed -->
-        <h1 class="headerHeading resetMargin">
+        <h1 class="headerHeading resetMargin" aria-label="이디야 커피">
             <!-- 이디야 로고 IR기법으로 링크는 새창에 이디야 -->
-            <a href="https://www.ediya.com/" aria-label="이디야 메인홈페이지 이동링크 이미지" target="_blank">
+            <a href="https://www.ediya.com/" aria-label="이디야 메인 홈 페이지 이동링크 이미지" target="_blank">
                 <img src="/style/images/Logo.svg" alt="이디야 커피 로고" title="이디야 커피 홈페이지로 이동">
             </a>
         </h1>
         <!-- 모바일 버전 시작월페이퍼 -->
-        <section class="appStartWraper" aria-hidden="true">
+        <section class="appStartWraper" role="banner">
             <h2 class="a11yHidden">이디야 커피어플리케이션 시작</h2>
             <img class="cherryBlossom1" src="./style/images/벚꽃.png" alt="벚꽃">
             <img class="cherryBlossom2" src="./style/images/벚꽃.png" alt="벚꽃">
@@ -31,7 +31,7 @@
                 메인 네비게이션 영역
             </h2>
             <!-- 버거 버튼, 애니 or 냅두기, 클릭이벤트 -->
-            <button class="resetBtn openNavigationBtn" type="button" title="메뉴열기" aria-label="메뉴열기버튼">
+            <button class="resetBtn openNavigationBtn" type="button" title="메뉴열기" aria-label="클릭 혹은 엔터를 누르면 네비게이션열기 탭을 누르면 메뉴로 바로 가기">
                 <span class="burgerBar1" aria-hidden="true"></span>
                 <span class="burgerBar2" aria-hidden="true"></span>
                 <span class="burgerBar3" aria-hidden="true"></span>
@@ -42,15 +42,38 @@
                 <h3 class="a11yHidden">네비게이션 리스트</h3>
                 <!-- 본 메뉴 리스트 li에 p-top, hover:tranform  -->
                 <ul class="navigationLists resetMargin">
-                    <li><a class="navigationItems" href="https://www.ediya.com/contents/menu_intro.html" target="_blank" title="새창으로 열기">메뉴</a></li>
-                    <li><a class="navigationItems" href="https://www.ediya.com/contents/members_intro.html" target="_blank" title="새창으로 열기">이디야 멤버스</a></li>
-                    <li><a class="navigationItems" href="https://www.ediya.com/contents/coffee_lab.html" target="_blank" title="새창으로 열기">이디야 커피랩</a></li>
-                    <li><a class="navigationItems" href="https://www.ediya.com/contents/music_festa.html" target="_blank" title="새창으로 열기">이디야 컬쳐랩</a></li>
-                    <li><a class="navigationItems" href="https://www.ediya.com/contents/notice.html?tb_name=notice" target="_blank" title="새창으로 열기">공지사항</a></li>
-                    <li><a class="navigationItems" href="https://www.ediya.com/contents/find_store.html" target="_blank" title="새창으로 열기">매장찾기</a></li>
+                    <li>
+                        <a class="navigationItems" href="https://www.ediya.com/contents/menu_intro.html" target="_blank" title="새창으로 열기" 
+                            aria-label="이디야 메인 홈페이지의 메뉴로 새창 이동">메뉴
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigationItems" href="https://www.ediya.com/contents/members_intro.html" target="_blank" title="새창으로 열기" 
+                            aria-label="이디야 메인 홈페이지의 멤버스로 새창 이동">이디야 멤버스
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigationItems" href="https://www.ediya.com/contents/coffee_lab.html" target="_blank" title="새창으로 열기" 
+                            aria-label="이디야 메인 홈페이지의 커피랩으로 새창 이동">이디야 커피랩
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigationItems" href="https://www.ediya.com/contents/music_festa.html" target="_blank" title="새창으로 열기" 
+                            aria-label="이디야 메인 홈페이지의 컬쳐랩으로 새창 이동">이디야 컬쳐랩
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigationItems" href="https://www.ediya.com/contents/notice.html?tb_name=notice" target="_blank" title="새창으로 열기" 
+                            aria-label="이디야 메인 홈페이지의 공지사항으로 새창 이동">공지사항
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigationItems" href="https://www.ediya.com/contents/find_store.html" target="_blank" title="새창으로 열기" 
+                            aria-label="이디야 메인 홈페이지의 매장찾기로 새창 이동">매장찾기
+                        </a>
+                    </li>
                 </ul>
                 <button class="resetBtn closeBtn" type="button" title="메뉴닫기" aria-label="메뉴닫기버튼">
-                    메뉴닫기버튼
                     <span class="cross1" aria-hidden="true"></span>
                     <span class="cross2" aria-hidden="true"></span>
                 </button>
@@ -66,14 +89,14 @@
         <!-- 메뉴 박스 섹션 -->
         <!-- 메뉴 리스트 flex,li 클릭이벤트 -->
         <ul class="menuLists">
-            <li class="menuList" tabindex="0" aria-label="메뉴 아이스 벚꽃라떼 클릭시 메뉴 상세보기">
+            <li class="menuList" tabindex="0" aria-label="메뉴 아이스 벚꽃라떼 클릭 혹은 엔터 누른 후 탭을 누르면 메뉴 상세보기">
                 <!-- 메뉴 사진 박스 -->
                 <figure class="resetMargin">
                     <img class="menuImg" src="./style/images/iced벚꽃라떼.svg" alt="ice벗꽃라떼">
                     <figcaption>ICED 벚꽃라떼</figcaption>
                 </figure>
                 <!-- 메뉴 상세정보 -->
-                <section class="menuExplain">
+                <section class="menuExplain" tabindex="0">
                     <h3 class="a11yHidden">메뉴 상세정보</h3>
                     <dl class=" resetMargin">
                         <!-- 메뉴타이틀 -->
@@ -116,12 +139,12 @@
                     </button>
                 </section>
             </li>
-            <li class="menuList" tabindex="0" aria-label="메뉴 핫 벚꽃라떼 클릭시 메뉴 상세보기">
+            <li class="menuList" tabindex="0" aria-label="메뉴 핫 벚꽃라떼 클릭 혹은 엔터를 누르면 메뉴 상세보기">
                 <figure class="resetMargin">
                     <img src="./style/images/hot벚꽃라떼.svg" alt="HOT 벚꽃라떼">
                     <figcaption>HOT 벚꽃 라떼</figcaption>
                 </figure>
-                <section class="menuExplain">
+                <section class="menuExplain" tabindex="0">
                     <h3 class="a11yHidden">메뉴 상세정보</h3>
                     <dl class="resetMargin">
                         <dt class="menuTitle">HOT 벚꽃라떼
@@ -159,12 +182,12 @@
                     </button>
                 </section>
             </li>
-            <li class="menuList" tabindex="0" aria-label="메뉴 아이스 브라우니쇼콜라 클릭시 메뉴 상세보기">
+            <li class="menuList" tabindex="0" aria-label="메뉴 아이스 브라우니쇼콜라 클릭 혹은 엔터를 누르면 메뉴 상세보기">
                 <figure class="resetMargin">
                     <img src="./style/images/iced브라우니쇼콜라.svg" alt="ice 브라우니 쇼콜라">
                     <figcaption>ICED 브라우니 쇼콜라</figcaption>
                 </figure>
-                <section class="menuExplain ">
+                <section class="menuExplain" tabindex="0">
                     <h3 class="a11yHidden">메뉴 상세정보</h3>
                     <dl class="resetMargin">
                         <dt class="menuTitle"> ICED 브라우니 쇼콜라
@@ -203,12 +226,12 @@
                     </button>
                 </section>
             </li>
-            <li class="menuList" tabindex="0" aria-label="메뉴 핫 브라우니쇼콜라 클릭시 메뉴 상세보기">
+            <li class="menuList" tabindex="0" aria-label="메뉴 핫 브라우니쇼콜라 클릭 혹은 엔터를 누르면 메뉴 상세보기">
                 <figure class="resetMargin">
                     <img src="./style/images/hot브라우니쇼콜라.svg" alt="Hot 브라우니 쇼콜라">
                     <figcaption>HOT 브라우니 쇼콜라</figcaption>
                 </figure>
-                <section class="menuExplain">
+                <section class="menuExplain" tabindex="0">
                     <h3 class="a11yHidden">메뉴 상세정보</h3>
                     <dl class="resetMargin">
                         <dt class="menuTitle">HOT 브라우니 쇼콜라
@@ -247,12 +270,12 @@
                     </button>
                 </section>
             </li>
-            <li class="menuList" tabindex="0" aria-label="메뉴 석류 애플라임 클릭시 메뉴 상세보기">
+            <li class="menuList" tabindex="0" aria-label="메뉴 석류 애플라임 클릭 혹은 엔터를 누르면 메뉴 상세보기">
                 <figure class="resetMargin">
                     <img src="./style/images/석류애플라임.svg" alt="석류 애플라임">
                     <figcaption>석류애플라임</figcaption>
                 </figure>
-                <section class="menuExplain">
+                <section class="menuExplain" tabindex="0">
                     <h3 class="a11yHidden">메뉴 상세정보</h3>
                     <dl class=" resetMargin">
                         <dt class="menuTitle">석류 애플라임
@@ -291,12 +314,12 @@
                     </button>
                 </section>
             </li>
-            <li class="menuList" tabindex="0" aria-label="메뉴 석류 오리지널 클릭시 메뉴 상세보기">
+            <li class="menuList" tabindex="0" aria-label="메뉴 석류 오리지널 클릭 혹은 엔터를 누르면 메뉴 상세보기">
                 <figure class="resetMargin">
                     <img src="./style/images/석류오리지널.svg" alt="석류오리지날">
                     <figcaption>석류오리지널</figcaption>
                 </figure>
-                <section class="menuExplain">
+                <section class="menuExplain" tabindex="0">
                     <h3 class="a11yHidden">메뉴 상세정보</h3>
                     <dl class=" resetMargin">
                         <dt class="menuTitle">석류오리지널
@@ -334,12 +357,12 @@
                     </button>
                 </section>
             </li>
-            <li class="menuList" tabindex="0" aria-label="메뉴 제주청귤블라썸 클릭시 메뉴 상세보기">
+            <li class="menuList" tabindex="0" aria-label="메뉴 제주청귤블라썸 클릭 혹은 엔터를 누르면 메뉴 상세보기">
                 <figure class="resetMargin">
                     <img src="./style/images/제주청귤블라썸.svg" alt="제주 청귤 블라썸">
                     <figcaption>제주청귤블라썸</figcaption>
                 </figure>
-                <section class="menuExplain">
+                <section class="menuExplain" tabindex="0">
                     <h3 class="a11yHidden">메뉴 상세정보</h3>
                     <dl class="resetMargin">
                         <dt class="menuTitle">제주청귤블라썸
@@ -379,12 +402,12 @@
 
                 </section>
             </li>
-            <li class="menuList" tabindex="0" aria-label="메뉴 제주청귤오리지널 클릭시 메뉴 상세보기">
+            <li class="menuList" tabindex="0" aria-label="메뉴 제주청귤오리지널 클릭 혹은 엔터를 누르면 메뉴 상세보기">
                 <figure class="resetMargin">
                     <img src="./style/images/제주청귤오리지널.svg" alt="제주청귤오리지날">
                     <figcaption>제주청귤오리지널</figcaption>
                 </figure>
-                <section class="menuExplain">
+                <section class="menuExplain" tabindex="0">
                     <h3 class="a11yHidden">메뉴 상세정보</h3>
                     <dl class="resetMargin">
                         <dt class="menuTitle">제주청귤 오리지널
@@ -425,7 +448,7 @@
             </li>
         </ul>
     </main>
-    <div class="flowerRainBox" role="none">
+    <div class="flowerRainBox" role="none" aria-hidden="true">
         <h2 aria-hidden="true" class="a11yHidden">흩날리는 꽃잎 배경 이미지</h2>
         <img src="./style/images/꽃잎.png" alt="조그마한 꽃잎">
         <img src="./style/images/꽃잎.png" alt="조그마한 꽃잎">

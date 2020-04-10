@@ -28,8 +28,28 @@ var navigationItems = document.querySelectorAll(".navigationItems");
 //navigationItems라는 클래스를 갖는 html태그를 navigationItems라는 변수로 선언
 // 단  querySeletorAll은 선택된 클래스를 갖는 모든 html태그를 선택한다.
 
+window.addEventListener("keydown",function(e){
+    if(e.keyCode == 38 || e.keyCode == 40){
+        console.log("1")
+        e.preventDefault();
+    }
+    
+})
 
 // 네비게이션 열기
+openNaviBtn.addEventListener("keydown",function(e){
+    e.preventDefault();
+    if(e.keyCode == 9){
+        var startMenu = document.querySelector(".menuList");
+        startMenu.focus();
+    }
+    else if(e. keyCode == 13){
+        navigationBox.classList.add("openNavi");
+        var startNavigation = document.querySelector(".navigationItems");
+        startNavigation.focus();
+    }
+})
+
 openNaviBtn.addEventListener("click", function (e) {
     // 대상.addEventListener("이벤트종류", "함수")      > addEventListener의 기본 모양
     //ㄴ openNaviBtn변수 즉 openNavigationBtn이라는 클래스를 갖는 html을 "click"하면
@@ -60,6 +80,8 @@ closeNaviBtn.addEventListener("keydown",function(e){
         navigationItems[0].focus();
         //첫 네비게이션 요소에 포커스 주기
     }else if(e.keyCode == 13 || e.keyCode == 27 || e.keyCode == 39){
+    e.preventDefault();
+        
         // 만약 눌러진 키가 enter(13) 혹은 esc(27) 혹은 오른쪽 화살표(39) 이라면
         navigationBox.classList.remove("openNavi");
         //클래스제거 
@@ -131,7 +153,6 @@ for(var i =0; i < navigationItems.length; ++i){
             // parentNode html상에서 부모 태그에서
             // nextElementSibling 부모 태그의 형제 레벨의 태그에서 부모 다음에 존재하는
             // 태그를 선택
-
             if( !nextTarget ){
                 //만약 위에서 선택한 태그가 존재하지 않으면 ! > 없다. not 의 의미에요
                 closeNaviBtn.focus();
@@ -191,9 +212,11 @@ for(var i=0; i < menuList.length; i++){
             getTarget.querySelector(".menuExplain").style.opacity="1"
             //이 변수중에 .menuExplain이라는 클래스를 갖고 있는 html태그에 스타일중에
             //opacity값을 1로 변경합니다.
+
         }, 100)
         // 0.1초 뒤에
     })
+
 
     // 엔터 입력시 열기
     menuList[i].addEventListener("keypress",function(e){
@@ -201,6 +224,7 @@ for(var i=0; i < menuList.length; i++){
         // 이번 이벤트의 종류는 keypress 입니다. keypress의 이벤트객체엔 
         // keycode라고 이용자가 누른 키보드의 키가 코드값으로 저장이 됩니다.
         // keycode 검색해보세요 지금 13은 키보드의 enter키 입니다.
+
         if(e.keyCode == "13"){
             //만약 이 이벤트가 focus를 받은 상태에서 눌린 키보드가 enter라면
             var getTarget = e.currentTarget;
@@ -208,9 +232,8 @@ for(var i=0; i < menuList.length; i++){
 
         getTarget.querySelector(".menuExplain").classList.add("show");
         //변수중에 menuExplain이라는 클래스를 같는 객체에 show클래스를 추가
-
         setTimeout(function(e){
-            getTarget.querySelector(".menuExplain").style.opacity="1"
+            getTarget.querySelector(".menuExplain").style.opacity="1";
         }, 100)
         //0.1초 뒤에 변수중에 menuExplain이라는 클래스를 같는 객체의 opacity값을
         // 1로 변경
